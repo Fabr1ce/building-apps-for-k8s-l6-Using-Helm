@@ -30,7 +30,7 @@ jobs:
         working-directory: .github/workflows
         run: |
           pwd
-          ls
+          ls -la
           sudo chmod +x install-docker.sh
           ./install-docker.sh
       - name: Install Kind
