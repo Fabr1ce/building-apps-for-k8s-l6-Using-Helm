@@ -1,7 +1,7 @@
 # building-apps-for-k8s-l6-using-Helm
 
-In this repo [Helm](https://helm.sh/) is used to package Kubernetes apps using a templating system as opposed to Kustomize which uses overlays.
-The created file (Helm Chart) will be saved in the app code repo.
+In this repo [Helm](https://helm.sh/) is used to package Kubernetes apps using a templating system as opposed to Kustomize which uses overlays. That explains why Helm is defined as a package manager for k8s apps.
+The created file (Helm Chart) will be saved in the app code repo, it can also be stored in a chart repo separate from the app code.
 
 ## The Steps
 1. Create a chart with a directory structure:
@@ -31,4 +31,4 @@ To make sure all k8s pods are delete:
 	`kubectl get pods`
         `kubectl delete all --all --all-namespaces`
 	
-That's it!
+That's it! For a more detailed step by step video, see the source ([KubeAcademy course](https://kube.academy/courses/building-applications-for-kubernetes/lessons/packaging-your-application)). 
