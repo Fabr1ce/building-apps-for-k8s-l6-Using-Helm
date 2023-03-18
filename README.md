@@ -2,12 +2,15 @@
 
 In this repo [Helm](https://helm.sh/) is used to package Kubernetes apps using a templating system as opposed to Kustomize which uses overlays. That explains why Helm is defined as a package manager for k8s apps.
 The created file (Helm Chart) will be saved in the app code repo, it can also be stored in a chart repo separate from the app code.
-
-## The Steps, using the CLI in the root of this directory
+## What's needed
+- Helm: To innstall Helm, see [here](https://helm.sh/docs/intro/install/)
+- Kubernetes cluster: To create a cluster, see [here](https://github.com/Fabr1ce/building-apps-for-k8s-l4-using-Kind#building-apps-for-k8s-l4-using-kind).
+## The Steps
+From an empty directory, using the CLI:
 1 . Create a chart with a directory structure:
 	`helm create build4kube`
 
-2 . Clean the repo by removing uneeded files. The command above creates a lot of template files that do not apply to this specific use case which can be removed.
+2 . Clean the repo by removing unnecessary files. The command above creates a lot of template files and most do not apply to this specific use case which can be removed.
 
 3 . Add templates to the build4kube/templates directory. YAML templates ([deployment.yaml](https://github.com/Fabr1ce/building-apps-for-k8s-l5-using-Kustomize/blob/main/deployment.yaml) and [service.yaml](https://github.com/Fabr1ce/building-apps-for-k8s-l5-using-Kustomize/blob/main/service.yaml)) from [lab 5](https://github.com/Fabr1ce/building-apps-for-k8s-l5-using-Kustomize) can be used.
 The templates need to be changed in order for Helm to use them:
