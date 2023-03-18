@@ -30,7 +30,7 @@ This section deals with managing the app deployment. A k8s cluster must already 
 	`helm rollback build4kube-<previous-release>`
 After rollback, the Helm chart will no longer match what's deployed. Another way to rollback would be to change the version in the Helm chart then generate the release again (this is recommended for version control and CICD).
 
-`helm package <directory-for-chart>` creates a tar zip file with the version that match the chart in the provided directory. 
+- To **archive**: `helm package <directory-for-chart>` creates a tar zip file with the version that match the chart in the provided directory. 
 
 5. Don't forget to clean up!
 	`helm delete <your-release> --purge`
