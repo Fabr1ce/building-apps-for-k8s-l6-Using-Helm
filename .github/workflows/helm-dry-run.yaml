@@ -31,7 +31,7 @@ jobs:
         run: |
           pwd
           ls -la
-          sudo chmod +x install-docker.sh
+          chmod +x install-docker.sh
           ls -la
           ./install-docker.sh
       - name: Install Kind
