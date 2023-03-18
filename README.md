@@ -32,7 +32,7 @@ After rollback, the Helm chart will no longer match what's deployed. Another way
 
 `helm package <directory-for-chart>` creates a tar zip file with the version that match the chart in the provided directory. 
 
-4. Don't forget to clean up!
+5. Don't forget to clean up!
 	`helm delete <your-release> --purge`
 
 To make sure all k8s pods are delete:
