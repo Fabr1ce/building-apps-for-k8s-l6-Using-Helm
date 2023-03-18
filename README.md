@@ -35,7 +35,7 @@ After rollback, the Helm chart will no longer match what's deployed. Another way
 5 . Don't forget to clean up!
 	`helm delete <your-release> --purge`
 
-    To make sure all k8s pods are delete:
+To make sure all k8s pods are delete:
 	`kubectl get pods`
         `kubectl delete all --all --all-namespaces`
 	
