@@ -35,12 +35,15 @@ jobs:
           ls -la
           ./install-docker.sh
       - name: Install Kind
-        run: curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.17.0/kind-linux-amd64 && \
-             chmod +x ./kind && \
-             sudo mv ./kind /usr/local/bin/kind
+        run: |
+          curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.17.0/kind-linux-amd64
+          chmod +x ./kind
+          sudo mv ./kind /usr/local/bin/kind
       - name: start k8s Cluster
         run: kind create cluster
       - name: Install Helm
-        run: curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 && chmod 700 get_helm.sh && ./get_helm.sh
+        run: |
+          curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+          chmod 700 get_helm.sh && ./get_helm.sh
       - name: Create Dry-Run Release 
         run: helm install --generate-name ./build4kube/ --dry-run
