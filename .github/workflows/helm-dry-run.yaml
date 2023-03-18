@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install Docker
-        run: pwd && chmod +x ./github/install-docker.sh && ./github/install-docker.sh
+        run: chmod +x ./.github/install-docker.sh && ./.github/install-docker.sh
       - name: Install Kind
         run: curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.17.0/kind-linux-amd64 && \
              chmod +x ./kind && \
