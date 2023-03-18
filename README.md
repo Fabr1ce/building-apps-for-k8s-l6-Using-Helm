@@ -4,7 +4,7 @@ In this repo [Helm](https://helm.sh/) is used to package Kubernetes apps using a
 The created file (Helm Chart) will be saved in the app code repo, it can also be stored in a chart repo separate from the app code.
 
 ## The Steps, using the CLI in the root of this directory
-1 - Create a chart with a directory structure:
+1 . Create a chart with a directory structure:
 	`helm create build4kube`
 
 2. Clean the repo by removing uneeded files. The command above creates a lot of template files that do not apply to this specific use case which can be removed.
