@@ -30,8 +30,9 @@ jobs:
         working-directory: .github/workflows
         run: |
           pwd
-          ls
+          ls -la
           sudo chmod +x install-docker.sh
+          ls -la
           ./install-docker.sh
       - name: Install Kind
         run: curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.17.0/kind-linux-amd64 && \
