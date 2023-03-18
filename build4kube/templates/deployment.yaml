@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: "{{ .Release.Name }}-building-apps-deploy"
   labels:
-    app: kubeacademy
+    app: kudeskills
 spec:
   replicas: {{ .Values.deploy.replicas }}
   selector:
     matchLabels:
-      app: kubeacademy
+      app: kudeskills
   template:
     metadata:
       labels:
-        app: kubeacademy
+        app: kudeskills
     spec:
       containers:
       - name: building-apps-container
