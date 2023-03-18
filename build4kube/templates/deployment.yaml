@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "{{ .Release.Name }}-building-apps-deploy"
+  labels:
+    app: kudeskills
+spec:
+  replicas: {{ .Values.deploy.replicas }}
+  selector:
+    matchLabels:
+      app: kudeskills
+  template:
+    metadata:
+      labels:
+        app: kudeskills
+    spec:
+      containers:
+      - name: building-apps-container
+        image: "{{ .Values.deploy.image.repository }}:{{ .Chart.AppVersion }}"
+
