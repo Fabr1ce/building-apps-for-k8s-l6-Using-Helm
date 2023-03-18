@@ -26,11 +26,9 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: Set env vars
-        run: WORK="/home/runner/work/building-apps-for-k8s-l6-Using-Helm/building-apps-for-k8s-l6-Using-Helm"
       - name: Install Docker
-        working-directory: ./.github
-        run: chmod +x home/runner/work/building-apps-for-k8s-l6-Using-Helm/building-apps-for-k8s-l6-Using-Helm/.github/install-docker.sh && home/runner/work/building-apps-for-k8s-l6-Using-Helm/building-apps-for-k8s-l6-Using-Helm/.github/install-docker.sh
+        working-directory: $(pwd)/.github
+        run: chmod +x ./install-docker.sh && ./install-docker.sh
       - name: Install Kind
         run: curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.17.0/kind-linux-amd64 && \
              chmod +x ./kind && \
