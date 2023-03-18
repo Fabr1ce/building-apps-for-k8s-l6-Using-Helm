@@ -29,7 +29,7 @@ jobs:
       - name: Set env vars
         run: WORK="/home/runner/work/building-apps-for-k8s-l6-Using-Helm/building-apps-for-k8s-l6-Using-Helm"
       - name: Install Docker
-        run: chmod +x $WORK/.github/install-docker.sh && $WORK/.github/install-docker.sh
+        run: chmod +x home/runner/work/building-apps-for-k8s-l6-Using-Helm/building-apps-for-k8s-l6-Using-Helm/.github/install-docker.sh && home/runner/work/building-apps-for-k8s-l6-Using-Helm/building-apps-for-k8s-l6-Using-Helm/.github/install-docker.sh
       - name: Install Kind
         run: curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.17.0/kind-linux-amd64 && \
              chmod +x ./kind && \
