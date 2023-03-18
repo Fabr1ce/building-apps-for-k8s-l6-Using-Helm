@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: "{{ .Release.name }}-building-apps-svc"
   labels:
-    app: kubeacademy
+    app: kudeskills
 spec:
   selector:
-    app: kubeacademy
+    app: kudeskills
   ports:
     - protocol: TCP
       port: 80
