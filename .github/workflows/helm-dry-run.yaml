@@ -27,10 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install Helm
-        run: |
-          curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3,
-          chmod 700 get_helm.sh,
-          ./get_helm.sh.
+        run: curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 && chmod 700 get_helm.sh && ./get_helm.sh.
       - name: Create Dry-Run Release 
         run: helm install --generate-name ./build4kube/ --dry-run
     
