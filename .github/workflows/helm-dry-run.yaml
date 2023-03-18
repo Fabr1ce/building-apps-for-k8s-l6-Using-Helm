@@ -25,7 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
+      # Runs multiple command using the runner shell
       - name: Install Docker
         working-directory: .github/workflows
         run: |
@@ -39,7 +39,8 @@ jobs:
           curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.17.0/kind-linux-amd64
           chmod +x ./kind
           sudo mv ./kind /usr/local/bin/kind
-      - name: start k8s Cluster
+      # Runs a single command using the runners shell
+      - name: Start k8s Cluster
         run: kind create cluster
       - name: Install Helm
         run: |
