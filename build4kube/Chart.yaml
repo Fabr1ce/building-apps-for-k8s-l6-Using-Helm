@@ -1,6 +1,6 @@
 apiVersion: v2
 name: build4kube
-description: Fsbr1ce Demo
+description: Fabr1ce Demo
 
 # A chart can be either an 'application' or a 'library' chart.
 #
