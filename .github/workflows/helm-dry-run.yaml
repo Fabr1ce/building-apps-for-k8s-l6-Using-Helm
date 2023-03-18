@@ -31,7 +31,7 @@ jobs:
         run: |
           pwd
           ls
-          chmod +x install-docker.sh
+          sudo chmod +x install-docker.sh
           ./install-docker.sh
       - name: Install Kind
         run: curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.17.0/kind-linux-amd64 && \
